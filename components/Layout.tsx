@@ -16,7 +16,7 @@ const Layout = ({
   title = "Fi-Da Elektroinstallationen",
   description = "Fischer & Daumüller - Elektroinstallationen in Filderstadt",
 }: Props) => (
-  <div>
+  <>
     <Head>
       <title>{title}</title>
       <meta name="description" content={description}></meta>
@@ -26,9 +26,9 @@ const Layout = ({
     </Head>
     <Topbar />
     <Navbar />
-    <main>{children}</main>
-    <Footer />
-  </div>
+    {children}
+    {/* <Footer /> */}
+  </>
 );
 
 export default Layout;

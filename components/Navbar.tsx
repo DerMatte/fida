@@ -1,29 +1,117 @@
 import Link from "next/link";
+import Image from "next/future/image";
 import cn from "classnames";
-import { useRouter } from "next/router";
 
-const Navbar = () => {
-  const router = useRouter();
+import { withRouter } from "next/router";
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
+// import { LogoRect, LogoLong } from "components/Logo";
+import Logo from "assets/pic/Logo2BreitKurz.png";
+import LogoRect from "assets/pic/LogoRect.png";
+
+const navigation = [
+  { name: "Home", href: "/", current: true },
+  { name: "Leistungen", href: "/leistungen", current: false },
+  { name: "Projekte", href: "/projekte", current: false },
+  { name: "Calendar", href: "#", current: false },
+];
+
+const Navbar = ({ router }) => {
   return (
-    <nav className="flex space-x-4 py-2 sm:justify-center">
-      {[
-        ["Home", "/"],
-        ["About", "/about"],
-      ].map(([title, url]) => (
-        <Link href={url} key={title}>
-          <a
-            className={cn(
-              router.asPath == url ? "underline underline-offset-2" : "",
-              "rounded-lg px-3 py-2 font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-            )}
-          >
-            {title}
-          </a>
-        </Link>
-      ))}
-    </nav>
+    <Disclosure as="nav" className=" ">
+      {({ open }) => (
+        <>
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
+              <div className="absolute inset-y-0  right-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              {/* big nav */}
+              <div className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between">
+                <div className="flex flex-shrink-0 items-start pl-2">
+                  <Link href="/">
+                    <a className="text-2xl font-bold">
+                      Fi-Da
+                      {/* <Image
+                        className="block h-16 w-auto lg:hidden"
+                        src={LogoRect}
+                        alt="Logo"
+                      />
+                      <Image
+                        className="hidden lg:block"
+                        src={Logo}
+                        alt="Logo"
+                      /> */}
+                    </a>
+                  </Link>
+                </div>
+                <div className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={cn(
+                          item.href == router.asPath
+                            ? "border-b-2 border-yellow "
+                            : "",
+                          "px-3 py-2 text-sm font-medium hover:border-b-2 hover:border-black "
+                        )}
+                        aria-current={
+                          item.href == router.asPath ? "page" : undefined
+                        }
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              {/* Call To Action Button */}
+              {/* <Link href="/contact">
+                <a className="inset-y-0 rounded-md bg-black px-3 py-2 text-sm font-medium text-white hover:border-2 hover:bg-black/75 ">
+                  Kontakt
+                </a>
+              </Link> */}
+            </div>
+          </div>
+
+          {/* </ end big nav> */}
+          {/* Dropdown mobile menu */}
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pt-2 pb-3">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={cn(
+                    item.href == router.asPath
+                      ? "bg-black text-white"
+                      : "text-black hover:bg-yellow hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
+                  )}
+                  aria-current={item.href == router.asPath ? "page" : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);
