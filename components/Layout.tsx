@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Topbar from "./Topbar";
 import Navbar from "./Navbar";
 import Footer from "components/Footer";
 
@@ -12,8 +13,8 @@ type Props = {
 
 const Layout = ({
   children,
-  title = "This is the default title",
-  description = "Put your default description here.",
+  title = "Fi-Da Elektroinstallationen",
+  description = "Fischer & Daumüller - Elektroinstallationen in Filderstadt",
 }: Props) => (
   <div>
     <Head>
@@ -23,8 +24,9 @@ const Layout = ({
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
+    <Topbar />
     <Navbar />
-    {children}
+    <main>{children}</main>
     <Footer />
   </div>
 );
