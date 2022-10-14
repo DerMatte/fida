@@ -23,7 +23,7 @@ const Navbar = ({ router }) => {
     <Disclosure as="nav" className=" ">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0  right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -38,7 +38,7 @@ const Navbar = ({ router }) => {
               </div>
               {/* big nav */}
               <div className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between">
-                <div className="flex flex-shrink-0 items-start pl-2">
+                <div className="flex flex-shrink-0 items-start pl-6 sm:pl-2">
                   <Link href="/">
                     <a className="text-2xl font-bold">
                       Fi-Da

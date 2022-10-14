@@ -7,9 +7,7 @@ type Props = {
 
 const SectionContainer = ({ children, className }: Props) => {
   return (
-    <section className={cn(`container mx-auto px-8 `, className)}>
-      {children}
-    </section>
+    <div className={cn(`container mx-auto px-8 `, className)}>{children}</div>
   );
 };
 export default SectionContainer;
