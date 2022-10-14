@@ -8,10 +8,10 @@ const Topbar = () => {
           Stützenweg 11, 70749 Filderstadt
         </span>
         <span className="flex-none flex-shrink-0 py-2 font-medium">
-          0711/701112
+          <a href="tel:+49 0711 701112">+49 0711 701112</a>
         </span>
         <span className="flex-none flex-shrink-0 py-2 font-medium">
-          info@fi-da.de
+          <a href="mailto:info@fi-da.de">info@fi-da.de</a>
         </span>
       </div>
     </section>
