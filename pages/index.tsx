@@ -21,8 +21,9 @@ const IndexPage = () => (
   <Layout>
     <section className="max-w-screen flex flex-col md:container md:mx-auto md:flex-row md:items-center md:px-8">
       <Image
-        className="object-cover md:h-[50vh] md:w-full md:max-w-[50vw] md:flex-1 "
+        className="object-cover md:h-[50vh] md:w-1/2 md:max-w-[50vw] md:flex-1 "
         src={banner}
+        priority={true}
         alt="Hero Banner"
       />
       {/* <div className="absolute top-1/2 left-1/2 flex -translate-y-1/2 -translate-x-1/2 flex-col items-center justify-center rounded-sm bg-white/75 p-8 backdrop-blur-lg"> */}

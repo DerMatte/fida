@@ -14,7 +14,7 @@ const Footer = () => {
             <Image src={Logo} alt="Fi-da GmbH Logo" className="w-40 " />
             <div className="flex flex-row space-x-4 pt-4">
               <Link href="#">
-                <a>
+                <a aria-label="Twitter Profile Link">
                   <svg
                     style={{ width: "24px", height: "24px" }}
                     className="fill-black hover:fill-white"
@@ -28,7 +28,7 @@ const Footer = () => {
                 </a>
               </Link>
               <Link href="#">
-                <a>
+                <a aria-label="Instagram Profile Link">
                   {/* <InstagramLogo size={24} /> */}
                   <svg
                     style={{ width: "24px", height: "24px" }}
@@ -43,7 +43,7 @@ const Footer = () => {
                 </a>
               </Link>
               <Link href="#">
-                <a>
+                <a aria-label="Facebook Profile Link">
                   {/* <FacebookLogo size={24} /> */}
                   <svg
                     style={{ width: "24px", height: "24px" }}
