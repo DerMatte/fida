@@ -65,7 +65,7 @@ const Navbar = ({ router }) => {
                           item.href == router.asPath
                             ? "border-b-2 border-yellow "
                             : "",
-                          "px-3 py-2 text-sm font-medium hover:border-b-2 hover:border-black "
+                          "px-3 py-2 font-semibold hover:border-b-2 hover:border-black "
                         )}
                         aria-current={
                           item.href == router.asPath ? "page" : undefined

@@ -80,7 +80,7 @@ const Testimonials = ({}) => {
           >
             <p className="max-w-xs flex-1 px-8 pt-8">{t.text}</p>
             <div className=" flex-1">
-              <h3 className="pt-4 ">{t.author}</h3>
+              <h4 className="pt-4 ">{t.author}</h4>
               <p className="pb-8 text-gray-500 ">{t.detail}</p>
             </div>
           </div>

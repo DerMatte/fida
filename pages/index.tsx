@@ -91,19 +91,19 @@ const IndexPage = () => (
     <SectionContainer className="border-y border-black py-24">
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
         <div className="flex flex-col items-center  gap-4">
-          <h4 className="text-5xl font-medium">25</h4>
+          <h4 className="text-4xl font-semibold">25</h4>
           <span className="">Jahre Erfahrung</span>
         </div>
         <div className="flex flex-col items-center  gap-4">
-          <h4 className="text-5xl font-medium">400 km</h4>
+          <h4 className="text-4xl font-semibold">400 km</h4>
           <span className="">an Leitungen verlegt</span>
         </div>
         <div className="flex flex-col items-center gap-4">
-          <h4 className="text-5xl font-medium">5000 kW</h4>
+          <h4 className="text-4xl font-semibold">5000 kW</h4>
           <span className="">Solarpanels verbaut</span>
         </div>
         <div className="flex flex-col items-center gap-4">
-          <h4 className="text-5xl font-medium">87%</h4>
+          <h4 className="text-4xl font-semibold">87%</h4>
           <span className="">Kundenzufriedenheit</span>
         </div>
       </div>
