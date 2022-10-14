@@ -21,12 +21,12 @@ const IndexPage = () => (
   <Layout>
     <section className="max-w-screen flex flex-col md:container md:mx-auto md:flex-row md:items-center md:px-8">
       <Image
-        className="h-64 flex-grow-0 object-cover md:h-[50vh] md:w-1/2 md:flex-1 "
+        className="object-cover md:h-[50vh] md:w-full md:flex-1 "
         src={banner}
         alt="Hero Banner"
       />
       {/* <div className="absolute top-1/2 left-1/2 flex -translate-y-1/2 -translate-x-1/2 flex-col items-center justify-center rounded-sm bg-white/75 p-8 backdrop-blur-lg"> */}
-      <SectionContainer className="flex-1">
+      <SectionContainer className="md:flex-1">
         <div className=" pt-12">
           <h2 className=" text-md uppercase text-gray-700">
             Elektroinstallationen - Photovoltaik & Speicher
