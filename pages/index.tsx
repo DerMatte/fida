@@ -21,17 +21,17 @@ const IndexPage = () => (
   <Layout>
     <section className="max-w-screen flex flex-col md:container md:mx-auto md:flex-row md:items-center md:px-8">
       <Image
-        className="object-cover md:h-[50vh] md:w-full md:flex-1 "
+        className="object-cover md:h-[50vh] md:w-full md:max-w-[50vw] md:flex-1 "
         src={banner}
         alt="Hero Banner"
       />
       {/* <div className="absolute top-1/2 left-1/2 flex -translate-y-1/2 -translate-x-1/2 flex-col items-center justify-center rounded-sm bg-white/75 p-8 backdrop-blur-lg"> */}
       <SectionContainer className="md:flex-1">
         <div className=" pt-12">
-          <h2 className=" text-md uppercase text-gray-700">
+          <h2 className=" text-md font-display uppercase text-gray-700">
             Elektroinstallationen - Photovoltaik & Speicher
           </h2>
-          <h1 className="pt-1 pb-2 text-3xl font-bold md:text-4xl">
+          <h1 className="pt-1 pb-2 font-display text-3xl font-bold md:text-4xl">
             Fischer & Daumüller <br /> Elektroinstallationen
           </h1>
           <p className="max-w-lg pb-10">
@@ -54,7 +54,9 @@ const IndexPage = () => (
     </section>
     <SectionContainer className="py-24">
       <div className="flex flex-col ">
-        <h3 className="pb-4 text-2xl font-bold">Unsere Leistungen</h3>
+        <h3 className="pb-4 font-display text-2xl font-bold">
+          Unsere Leistungen
+        </h3>
         <p className="max-w-lg pb-16">
           Die Firma Fi-Da GmbH, Fischer und Daumüller, wurde 1998 von den
           Elektromeistern Hans-Ulrich Fischer und Andreas Daumüller gegründet.
