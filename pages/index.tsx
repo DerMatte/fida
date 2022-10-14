@@ -13,6 +13,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import Testimonials from "components/Testimonials";
 import Contact from "components/Contact";
+import Partner from "components/Partner";
 
 const IndexPage = () => (
   <Layout>
@@ -80,10 +81,7 @@ const IndexPage = () => (
         </div>
       </div>
     </SectionContainer>
-    <SectionContainer className="py-24">
-      {/* Partner */}
-      <h3 className="text-2xl font-bold">Unsere Partner</h3>
-    </SectionContainer>
+    <Partner />
     {/* Vergangene Projekte */}
     <SectionContainer className="py-24">
       <h3 className="text-2xl font-bold">Vergangene Projekte</h3>
