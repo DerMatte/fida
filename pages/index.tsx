@@ -1,6 +1,8 @@
 import Topbar from "components/Topbar";
 import Link from "next/link";
 import Image from "next/future/image";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
 
 import Layout from "components/Layout";
 import SectionContainer from "components/SectionContainer";
@@ -8,12 +10,21 @@ import SectionContainer from "components/SectionContainer";
 
 import { LeistungenData, ProjektData } from "lib/data";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import Testimonials from "components/Testimonials";
-import Contact from "components/Contact";
-import Partner from "components/Partner";
+// import Partner from "components/Partner";
+const DynamicPartner = dynamic(() => import("components/Partner"), {
+  suspense: true,
+});
+
+// import Testimonials from "components/Testimonials";
+const Testimonials = dynamic(() => import("components/Testimonials"), {
+  suspense: true,
+});
+
 import Projekte from "components/Projekte";
+const DynamicContact = dynamic(() => import("components/Contact"), {
+  suspense: true,
+});
+// import Contact from "components/Contact";
 
 import banner from "assets/pic/banner_fi-da-team.jpg";
 
@@ -86,7 +97,11 @@ const IndexPage = () => (
         </div>
       </div>
     </SectionContainer>
-    <Partner />
+    {/* <Partner /> */}
+    <Suspense fallback={<div>Loading...</div>}>
+      <DynamicPartner />
+    </Suspense>
+
     <Projekte />
     <SectionContainer className="border-y border-black py-24">
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
@@ -108,8 +123,14 @@ const IndexPage = () => (
         </div>
       </div>
     </SectionContainer>
-    <Testimonials />
-    <Contact />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Testimonials />
+    </Suspense>
+    {/* <Testimonials /> */}
+    {/* <Contact /> */}
+    <Suspense fallback={<div>Lade Kontakt Formular...</div>}>
+      <DynamicContact />
+    </Suspense>
   </Layout>
 );
 

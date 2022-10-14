@@ -93,11 +93,10 @@ const Contact = () => {
               <select
                 name="projektart"
                 id="projektart"
+                defaultValue="auswaelen"
                 className="form-select mt-1 rounded-md border border-gray-500 bg-white p-2"
               >
-                <option value="auswaelen" selected>
-                  Bitte auswählen
-                </option>
+                <option value="auswaelen">Bitte auswählen</option>
                 <option value="elektroinstallationen">
                   Elektroinstallationen
                 </option>

@@ -8,8 +8,9 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 // import { LogoRect, LogoLong } from "components/Logo";
-import Logo from "assets/pic/Logo2BreitKurz.png";
-import LogoRect from "assets/pic/LogoRect.png";
+// import { Logo2BreitKurz, Logo } from "components/Logo";
+import Logo from "assets/pic/Logo2LangFett.png";
+// import LogoRect from "assets/pic/LogoRect.png";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -40,18 +41,12 @@ const Navbar = ({ router }) => {
               <div className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between">
                 <div className="flex flex-shrink-0 items-start pl-6 sm:pl-2">
                   <Link href="/">
-                    <a className="text-2xl font-bold">
-                      Fi-Da
-                      {/* <Image
-                        className="block h-16 w-auto lg:hidden"
-                        src={LogoRect}
-                        alt="Logo"
-                      />
+                    <a>
                       <Image
-                        className="hidden lg:block"
+                        className="block h-8 w-auto object-cover"
                         src={Logo}
                         alt="Logo"
-                      /> */}
+                      />
                     </a>
                   </Link>
                 </div>
