@@ -15,7 +15,7 @@ const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Leistungen", href: "/leistungen", current: false },
   { name: "Projekte", href: "/projekte", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Über uns", href: "/ueber", current: false },
 ];
 
 const Navbar = ({ router }) => {
