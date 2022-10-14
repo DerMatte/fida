@@ -38,7 +38,7 @@ export const ProjektData = [
     {
         title: "Rathhaus Filderstadt",
         description: "Wir haben das Rathaus Filderstadt mit einer neuen Beleuchtung ausgestattet.",
-        image: "https://picsum.photos/200/300",
+        image: projekt_1,
         slug: "rathaus-filderstadt",
         details: {
             location: "Ludwigsburg",
@@ -48,7 +48,7 @@ export const ProjektData = [
     {
         title: "Schule Weil der Stadt",
         description: "Wir haben die Schule Weil der Stadt mit einer Solaranlage ausgestattet.",
-        image: "https://picsum.photos/200/300",
+        image: projekt_2,
         slug: "schule-weil-der-stadt",
         details: {
             location: "Weil der Stadt",
@@ -59,7 +59,7 @@ export const ProjektData = [
     {
         title: "Gemeindehaus Leinfelden-Echterdingen",
         description: "Wir haben das Gemeindehaus Leinfelden-Echterdingen mit einer neuen Beleuchtung ausgestattet.",
-        image: "https://picsum.photos/200/300",
+        image: projekt_3,
         slug: "gemeindehaus-leinfelden-echterdingen",
         details: {
             location: "Leinfelden-Echterdingen",
@@ -69,7 +69,7 @@ export const ProjektData = [
     {
         title: "Fi-Da Photovoltaik",
         description: "Wir haben unser eigenes Gebäude mit einer brandneuen Solaranlage ausgestattet.",
-        image: "https://picsum.photos/200/300",
+        image: projekt_4,
         slug: "fi-da-photovoltaik",
         details: {
             location: "Bernhausen",
@@ -78,3 +78,8 @@ export const ProjektData = [
         }
     },
 ];
+
+import projekt_1 from "assets/pic/projekte/filderstadt-altes-rathaus.jpg";
+import projekt_2 from "assets/pic/projekte/pexels-flash-dantz-7790431.jpg";
+import projekt_3 from "assets/pic/projekte/pexels-kindel-media-9875443.jpg";
+import projekt_4 from "assets/pic/projekte/pexels-quang-nguyen-vinh-6876537.jpg";
