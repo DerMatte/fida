@@ -12,6 +12,7 @@ import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Testimonials from "components/Testimonials";
+import Contact from "components/Contact";
 
 const IndexPage = () => (
   <Layout>
@@ -175,15 +176,7 @@ const IndexPage = () => (
       </div>
     </SectionContainer>
     <Testimonials />
-    <SectionContainer className="flex flex-col py-24 md:flex-row">
-      <aside className="">
-        <h3 className="text-2xl font-bold">Kontakt</h3>
-        <p className="pt-4 ">
-          Wir freuen uns auf Ihre Anfrage. Füllen Sie einfach das Formular aus
-          und wir melden uns umgehend bei Ihnen.
-        </p>
-      </aside>
-    </SectionContainer>
+    <Contact />
   </Layout>
 );
 

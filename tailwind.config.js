@@ -13,6 +13,9 @@ module.exports = {
         yellow: "#f7c51e",
       },
     },
-    plugins: [],
+    plugins: [
+      require("@tailwindcss/forms"),
+      require("@tailwindcss/line-clamp"),
+    ],
   },
 };
