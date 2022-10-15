@@ -1,13 +1,13 @@
 import Link from "next/link";
-
+import SectionContainer from "components/SectionContainer";
 import Layout from "components/Layout";
 
 const NotFoundPage = () => {
   return (
     <Layout title="404 - Seite nicht gefunden">
-      <div className="flex min-h-screen flex-col items-center justify-center">
+      <SectionContainer className="flex min-h-screen flex-col items-center justify-center">
         <h1 className="text-2xl font-bold md:text-4xl">
-          404 - Seite nicht gefunden
+          404 - Dieser Teil der Seite wurde noch nicht gebaut.
         </h1>
         <p className="pt-4">
           <Link href="/">
@@ -16,7 +16,7 @@ const NotFoundPage = () => {
             </a>
           </Link>
         </p>
-      </div>
+      </SectionContainer>
     </Layout>
   );
 };

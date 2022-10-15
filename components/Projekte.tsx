@@ -69,7 +69,7 @@ const Projekte = () => {
                 )}
                 {projekt.details.leistung && (
                   <span className=" rounded-md bg-black px-4 py-2 text-xs text-white">
-                    {projekt.details.leistung}
+                    {projekt.details.leistung + " kW"}
                   </span>
                 )}
               </div>

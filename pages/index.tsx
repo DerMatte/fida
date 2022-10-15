@@ -44,19 +44,20 @@ const IndexPage = () => (
             Elektroinstallationen - Photovoltaik & Speicher
           </h2>
           <h1 className="pt-1 pb-2 font-display text-3xl font-bold md:text-4xl">
-            Fischer & Daumüller <br /> Elektroinstallationen
+            Fischer & Daumüller <br /> Elektro
+            <span className="hidden md:inline">installationen</span>
           </h1>
           <p className="max-w-lg pb-10">
             Das Fi-Da Team ist für Sie rund um den Strom für Sie unterwegs!
           </p>
         </div>
         <div className="flex gap-4">
-          <Link href="#">
+          <Link href="/#Leistungen">
             <a className=" rounded-md border-2 px-4 py-2 decoration-black hover:border-2 hover:border-yellow ">
               Mehr erfahren
             </a>
           </Link>
-          <Link href="/kontakt">
+          <Link href="/#Kontakt">
             <a className="rounded-md bg-black px-4 py-2 text-white hover:border-2 hover:border-yellow">
               Kontakt
             </a>
@@ -65,7 +66,7 @@ const IndexPage = () => (
       </SectionContainer>
     </section>
     <SectionContainer className="py-24">
-      <div className="flex flex-col ">
+      <div id="Leistungen" className="flex flex-col ">
         <h3 className="pb-4 font-display text-2xl font-bold">
           Unsere Leistungen
         </h3>

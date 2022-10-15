@@ -16,7 +16,7 @@ const Contact = () => {
   // }
   return (
     <SectionContainer className="flex flex-col justify-between py-24 md:flex-row">
-      <aside className="">
+      <aside id="Kontakt" className="">
         <h3 className="text-2xl font-bold">Kontakt</h3>
         <p className="max-w-md pt-4 ">
           Wir freuen uns auf Ihre Anfrage. Füllen Sie einfach das Formular aus
