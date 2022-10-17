@@ -31,9 +31,9 @@ import AnimateNumber from "components/AnimateNumber";
 
 const IndexPage = () => (
   <Layout>
-    <section className="max-w-screen flex flex-col md:container md:mx-auto md:flex-row md:items-center md:px-8">
+    <section className="max-w-screen flex flex-col md:container md:mx-auto md:flex-row md:items-center  md:px-8 md:pt-8">
       <Image
-        className="object-cover md:h-[50vh] md:w-1/2 md:max-w-[50vw] md:flex-1 "
+        className="object-cover md:h-[50vh] md:w-1/2 md:max-w-[50vw] md:flex-1 md:rounded-sm "
         src={banner}
         priority={true}
         alt="Hero Banner"

@@ -1,7 +1,7 @@
 import { animate } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-const AnimateNumber = ({ from, to, duration = 3 }) => {
+const AnimateNumber = ({ from, to, duration = 7 }) => {
   const nodeRef = useRef();
 
   useEffect(() => {

@@ -35,19 +35,21 @@ const Projekte = () => {
         </li>
       </ul>
 
-      <div className="grid grid-cols-1 gap-4 pt-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className=" grid grid-cols-1 gap-4 pt-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {ProjektData.map((projekt) => (
           <Link key={projekt.slug} href={`/projekte/${projekt.slug}`}>
-            <a className="flex flex-col gap-4  ">
+            <a className="group flex flex-col gap-4  ">
               <Image
                 src={projekt.image}
                 height={200}
                 width={300}
                 alt={projekt.title}
-                className=" aspect-square w-full rounded-md object-cover"
+                className=" aspect-square w-full rounded-md object-cover transition-opacity duration-75 group-hover:opacity-80"
               />
               <div className="flex flex-1 flex-col justify-start">
-                <h4 className="pb-2 text-xl font-semibold">{projekt.title}</h4>
+                <h4 className="pb-2 text-xl font-semibold group-hover:underline">
+                  {projekt.title}
+                </h4>
                 <p>{projekt.description}</p>
               </div>
               <div className="flex flex-row flex-wrap items-center justify-between gap-4 pt-4 pb-8">

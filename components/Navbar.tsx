@@ -9,7 +9,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 // import { LogoRect, LogoLong } from "components/Logo";
 // import { Logo2BreitKurz, Logo } from "components/Logo";
-import Logo from "assets/pic/Logo2LangFett.png";
+import Logo from "assets/pic/Logo40.png";
 // import LogoRect from "assets/pic/LogoRect.png";
 
 const navigation = [
@@ -43,9 +43,11 @@ const Navbar = ({ router }) => {
                   <Link href="/">
                     <a>
                       <Image
-                        className="block h-8 w-auto object-cover"
+                        className=""
+                        width={130}
+                        height={42}
                         src={Logo}
-                        alt="Logo"
+                        alt="Logo Fi-Da"
                       />
                     </a>
                   </Link>

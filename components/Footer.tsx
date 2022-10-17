@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
           <div
             id="right"
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
+            className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-4"
           >
             <div className="flex flex-col space-y-2">
               <p className="pb-4 font-semibold">Über uns</p>
@@ -76,7 +76,9 @@ const Footer = () => {
               </Link>
             </div>
             <div className="flex flex-col space-y-2">
-              <p className="pb-4 font-semibold">Leistungen</p>
+              <Link href="/leistungen">
+                <a className="pb-4 font-semibold hover:underline">Leistungen</a>
+              </Link>
               <Link href="/leistungen/elektroinstallationen">
                 <a className="hover:underline">Elektroinstallationen</a>
               </Link>
@@ -85,9 +87,6 @@ const Footer = () => {
               </Link>
               <Link href="/leistungen/gebaeudetechnik">
                 <a className="hover:underline">Gebäudetechnik</a>
-              </Link>
-              <Link href="/leistungen">
-                <a className="pt-2 hover:underline">Alle Leistungen &#10140;</a>
               </Link>
             </div>
             <div className="flex flex-col space-y-2">
