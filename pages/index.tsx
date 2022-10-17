@@ -81,14 +81,14 @@ const IndexPage = () => (
         <div className="grid grid-cols-1 gap-4 gap-y-8 md:grid-cols-2 ">
           {LeistungenData.map((leistung) => (
             <Link key={leistung.slug} href={`/leistungen/${leistung.slug}`}>
-              <a className="flex flex-row gap-4  ">
+              <a className="group flex flex-row gap-4 ">
                 <Image
                   src={leistung.image}
                   alt={leistung.title}
-                  className="w-20 rounded-sm object-cover"
+                  className="w-20 rounded-sm object-cover transition-opacity delay-75 duration-300 group-hover:opacity-80"
                 />
                 <div className="flex flex-1 flex-col justify-start">
-                  <h4 className="pb-2 text-xl font-semibold">
+                  <h4 className="pb-2 text-xl font-semibold group-hover:underline">
                     {leistung.title}
                   </h4>
                   <p className="max-w-md">{leistung.description}</p>

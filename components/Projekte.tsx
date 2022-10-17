@@ -44,7 +44,7 @@ const Projekte = () => {
                 height={200}
                 width={300}
                 alt={projekt.title}
-                className=" aspect-square w-full rounded-md object-cover transition-opacity duration-75 group-hover:opacity-80"
+                className=" aspect-square w-full rounded-md object-cover transition-opacity delay-75 duration-300 group-hover:opacity-80"
               />
               <div className="flex flex-1 flex-col justify-start">
                 <h4 className="pb-2 text-xl font-semibold group-hover:underline">
@@ -53,22 +53,17 @@ const Projekte = () => {
                 <p>{projekt.description}</p>
               </div>
               <div className="flex flex-row flex-wrap items-center justify-between gap-4 pt-4 pb-8">
-                {/* {projekt.details.map((detail, i) => (
-                  <span
-                    key={i}
-                    className="rounded-md bg-black px-2 py-1 text-white"
-                  >
-                    {detail}
-                  </span>
-                ))} */}
-                <span className=" rounded-md bg-black px-4 py-2 text-xs text-white">
-                  {projekt.details.location}
-                </span>
                 {projekt.details.typ && (
                   <span className=" rounded-md bg-black px-4 py-2 text-xs text-white">
                     {projekt.details.typ}
                   </span>
                 )}
+                {projekt.details.location && (
+                  <span className=" rounded-md bg-black px-4 py-2 text-xs text-white">
+                    {projekt.details.location}
+                  </span>
+                )}
+
                 {projekt.details.leistung && (
                   <span className=" rounded-md bg-black px-4 py-2 text-xs text-white">
                     {projekt.details.leistung + " kW"}
